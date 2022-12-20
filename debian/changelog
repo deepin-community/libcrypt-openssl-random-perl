@@ -1,0 +1,133 @@
+libcrypt-openssl-random-perl (0.15-2-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Thu, 24 Nov 2022 07:21:55 +0800
+
+libcrypt-openssl-random-perl (0.15-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ gregor herrmann ]
+  * Update Build-Depends for cross builds.
+    Closes: #971854
+  * Declare compliance with Debian Policy 4.4.1.
+  * debian/watch: use uscan version 4.
+  * Update 'DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow' to '=+all'.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Bump debhelper-compat to 13.
+  * Set upstream metadata field: Bug-Database.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 08 Oct 2020 18:11:49 +0200
+
+libcrypt-openssl-random-perl (0.15-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * Import upstream version 0.15.
+  * Update years of packaging copyright.
+  * Update upstream contact.
+  * Declare compliance with Debian Policy 4.1.5.
+  * Bump debhelper compatibility level to 10.
+  * Refresh Makefile.PL-no-ssl-in-LIBS.patch (offset).
+  * Add patch Makefile.PL-no-Crypt::OpenSSL::Guess.patch.
+    Patch out need for Crypt::OpenSSL::Guess in Makefile.PL which is neither
+    packaged nor needed in Debian.
+  * Set bindnow linker flag in debian/rules.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 31 Jul 2018 18:40:23 +0200
+
+libcrypt-openssl-random-perl (0.11-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Add debian/upstream/metadata.
+  * Update Makefile.PL-no-ssl-in-LIBS.patch.
+  * Drop pod.patch, fixed upstream.
+  * Update years of packaging copyright.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 22 Nov 2015 15:58:37 +0100
+
+libcrypt-openssl-random-perl (0.04-2) unstable; urgency=low
+
+  * Team upload.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * Add new patch to fix a pod error.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Switch to "3.0 (quilt)" source format.
+  * debian/rules: use three-line dh(1) variant.
+  * Remove remaining quilt fragments.
+  * debian/copyright: switch formatting to Copyright-Format 1.0.
+  * Use debhelper 9.20120312 to get all hardening flags.
+  * Improve short and long description.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 21 Feb 2014 19:18:23 +0100
+
+libcrypt-openssl-random-perl (0.04-1) unstable; urgency=low
+
+  * Taking over maintenance on request of maintainer.
+
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza).
+  * Changed Maintainer to Debian Perl Group
+  * add debian/watch
+
+  * New upstream release
+  * debhelper compatibility level 6
+  * Standards-Version: 3.7.3 (no changes)
+  * add myself to Uploaders
+  * debian/rules: sync with dh-make-perl's template
+  * patch Makefile.PL to not include -lssl in LIBS
+  * add ${perl:Depends} to Depends. Thanks, Niko.
+  * debian/copyright: use dist-based upstream URL
+    + clean a bit where copyright years come from
+
+ -- Damyan Ivanov <dmn@debian.org>  Sun, 27 Jan 2008 22:04:27 +0200
+
+libcrypt-openssl-random-perl (0.03-1) unstable; urgency=low
+
+  * Initial release (Closes: #362957).
+
+ -- Luk Claes <luk@debian.org>  Mon, 15 May 2006 04:40:52 +0200

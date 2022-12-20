@@ -1,0 +1,18 @@
+Description: do not include -lssl in LIBS
+Origin: vendor
+Forwarded: not-needed
+Author: Damyan Ivanov <dmn@debian.org>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2018-07-31
+
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -11,7 +11,7 @@
+ if ($args =~ /LIBDIR[ =](\S+)/) {
+   $libdir = $1;
+ }
+-my $libs = "-lssl -lcrypto";
++my $libs = "-lcrypto";
+ 
+ WriteMakefile(
+   'NAME'	    => 'Crypt::OpenSSL::Random',
