@@ -3,7 +3,7 @@ Origin: vendor
 Forwarded: not-needed
 Author: Damyan Ivanov <dmn@debian.org>
 Reviewed-by: gregor herrmann <gregoa@debian.org>
-Last-Update: 2018-07-31
+Last-Update: 2024-06-15
 
 --- a/Makefile.PL
 +++ b/Makefile.PL
@@ -14,5 +14,5 @@ Last-Update: 2018-07-31
 -my $libs = "-lssl -lcrypto";
 +my $libs = "-lcrypto";
  
- WriteMakefile(
-   'NAME'	    => 'Crypt::OpenSSL::Random',
+ if ( $Config{osname} eq 'aix' ) {
+   $libs = $libs . ' -lz';

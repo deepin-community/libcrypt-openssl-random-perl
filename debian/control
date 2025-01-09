@@ -5,17 +5,20 @@ Section: perl
 Testsuite: autopkgtest-pkg-perl
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
+               libcrypt-openssl-guess-perl,
                libssl-dev,
+               libtest-simple-perl <!nocheck>,
                perl-xs-dev,
                perl:native
-Standards-Version: 4.5.0
+Standards-Version: 4.7.0
 Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libcrypt-openssl-random-perl
 Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libcrypt-openssl-random-perl.git
-Homepage: http://perl-openssl.sourceforge.net/
+Homepage: https://perl-openssl.sourceforge.net/
 Rules-Requires-Root: no
 
 Package: libcrypt-openssl-random-perl
 Architecture: any
+Multi-Arch: same
 Depends: ${misc:Depends},
          ${perl:Depends},
          ${shlibs:Depends}
