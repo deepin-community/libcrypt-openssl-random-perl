@@ -1,2 +1,2 @@
 Makefile.PL-no-ssl-in-LIBS.patch
-Makefile.PL-no-Crypt::OpenSSL::Guess.patch
+auto-gitignore
